@@ -1,6 +1,18 @@
 .nav-wrapper{
-	background-color: gray;
+	background-color: purple;
 }
 #row1{
 	margin-top: 40px;
 }
+
+.parallax-container {
+      height: 300px;
+}
+#codeImage{
+	opacity: 0.6
+}
+
+  #map {
+        height: 500px;
+        width: 500px;
+      }
