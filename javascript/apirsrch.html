@@ -1,0 +1,56 @@
+ header('Access-Control-Allow-Origin: *');
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+</head>
+<body>
+<button id='clickme'>click me</button>
+<div id='show'></div>
+<script type="text/javascript">
+
+$(function() {
+
+ 	function getsample() {
+     
+        // console.log(titl
+        	var queryURL = 'http://itunes.apple.com/search?term=javascript&media=podcast&entity=podcast' 
+
+        // var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + title +
+        // "&api_key=dc6zaTOxFJmzC&limit=10&fmt=JSON";
+        
+        $.ajax({
+                url: queryURL,
+                method: 'GET',
+                dataType: 'jsonp'
+        })
+          .done(function(response) {
+          	console.log(response);
+          	var a=response;
+          	var b=response.results;
+          	var d='';
+          	console.log(response.resultCount)
+          	for (var i = 0; i < response.resultCount; i++) {
+          			
+          			var d = d + '<h1>'+b[i].artistName + '</h1>' +
+          				'<img src=' + b[i].artworkUrl100 + '>' +
+          				'<a href=' + b[i].trackViewUrl + '><br>'
+          			// debugger;
+          	}		
+          	$('#show').html(d)
+          });
+
+    }
+
+    $(document).on('click', '#clickme', function() {
+    	getsample();	
+    });
+    
+});
+
+</script>
+</body>
+</html>
+
+

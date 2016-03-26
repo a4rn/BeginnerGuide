@@ -1,21 +1,12 @@
-<<<<<<< HEAD
  // loads the parallax effect when the page loads
  $(document).ready(function(){
-=======
- $(document).ready(function(){
- 	// loads the parallax effect when the page loads
->>>>>>> 46453d9588468290d2aad00f1d1ee8bd6bb4bd3f
       $('.parallax').parallax(); 
 });
 
 
-<<<<<<< HEAD
 //creating the Google map
  function initMap() {
  //array for the location of the markers	
-=======
- function initMap() {
->>>>>>> 46453d9588468290d2aad00f1d1ee8bd6bb4bd3f
 	var locations = [
 	      ['Rutgers Coding Bootcamp', 40.717470, -74.033561, 4],
 	      ['App Academy', 40.725024, -73.996792, 5],
@@ -24,10 +15,7 @@
 	      ['Flatiron School', 40.705280, -74.014025, 1]
 	    ];
 
-<<<<<<< HEAD
 // creates the actual map with the center on Rutgers Coding Bootcamp
-=======
->>>>>>> 46453d9588468290d2aad00f1d1ee8bd6bb4bd3f
 	    var map = new google.maps.Map(document.getElementById('map'), {
 	      zoom: 12,
 	      center: new google.maps.LatLng(40.717470, -74.033561),
@@ -38,20 +26,14 @@
 
 	    var marker, i;
 
-<<<<<<< HEAD
 // sets up loop for tthe markers
-=======
->>>>>>> 46453d9588468290d2aad00f1d1ee8bd6bb4bd3f
 	    for (i = 0; i < locations.length; i++) {  
 	      marker = new google.maps.Marker({
 	        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 	        map: map
 	      });
 
-<<<<<<< HEAD
 // creates the content window when the marker is clicked
-=======
->>>>>>> 46453d9588468290d2aad00f1d1ee8bd6bb4bd3f
 	      google.maps.event.addListener(marker, 'click', (function(marker, i) {
 	        return function() {
 	          infowindow.setContent(locations[i][0]);
