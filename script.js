@@ -5,43 +5,39 @@
 
 
  function initMap() {
-        var rcb = {lat: 40.7282, lng: -74.0776};
-	        var map = new google.maps.Map(document.getElementById('map'), {
-	          zoom: 10,
-	          center: rcb
-	        });
+	var locations = [
+	      ['Rutgers Coding Bootcamp', 40.717470, -74.033561, 4],
+	      ['App Academy', 40.725024, -73.996792, 5],
+	      ['General Assembly', 40.739885, -73.990082, 3],
+	      ['Dev Bootcamp', 40.706417, -74.009089, 2],
+	      ['Flatiron School', 40.705280, -74.014025, 1]
+	    ];
 
-      var contentWindow= [{
-      		name: "Rutgers Coding Bootcamp",
-      		blurb: "Jersey City location",
-      		// link: '<p><a href="https://codingbootcamp.rutgers.edu/" target="_blank">'+
-        //     'https://codingbootcamp.rutgers.edu/</a> '+
-        //     '</p>'
-      }];
+	    var map = new google.maps.Map(document.getElementById('map'), {
+	      zoom: 12,
+	      center: new google.maps.LatLng(40.717470, -74.033561),
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    });
 
-	        var infowindow = new google.maps.InfoWindow({
-	          content: contentWindow.name
-	        });
+	    var infowindow = new google.maps.InfoWindow();
 
-	        var marker = new google.maps.Marker({
-	          position: rcb,
-	          map: map,
-	          title: 'Rutgers Coding Bootcamp'
-	        });
+	    var marker, i;
 
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
+	    for (i = 0; i < locations.length; i++) {  
+	      marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+	        map: map
+	      });
 
-        	  var marker = new google.maps.Marker({
-	          position: {lat: 40.8282, lng: -74.0876},
-	          map: map,
-	          title: 'Rutge'
-	        });
+	      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	        return function() {
+	          infowindow.setContent(locations[i][0]);
+	          infowindow.open(map, marker);
+	        }
+	      })(marker, i));
+	    }
 
-
-
- }
+ };
 
 
 
