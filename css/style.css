@@ -1,0 +1,28 @@
+.nav-wrapper{
+	background-color: purple;
+}
+#row1{
+	margin-top: 40px;
+}
+
+.parallax-container {
+      height: 300px;
+}
+#codeImage{
+	opacity: 0.6
+}
+
+#map {
+    height: 500px;
+    width: 600px;
+    float: left;
+    display: inline;
+}
+#bootcampList{
+	float: left;
+	display: inline;
+	margin-left: 20px
+}
+#address{
+	margin-left: 20px;
+}
