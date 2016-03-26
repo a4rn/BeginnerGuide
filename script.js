@@ -4,37 +4,51 @@
 });
 
 
-      function initMap() {
+ function initMap() {
         var rcb = {lat: 40.7282, lng: -74.0776};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: rcb
-        });
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 10,
+	          center: rcb
+	        });
 
-        var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">RCB</h1>'+
-            '<div id="bodyContent">'+
-            '<p>Rutgers Coding Bootcamp</p>'+
-            '<p><a href="https://codingbootcamp.rutgers.edu/">'+
-            'https://codingbootcamp.rutgers.edu/</a> '+
-            '</p>'+
-            '</div>'+
-            '</div>';
+      var contentWindow= [{
+      		name: "Rutgers Coding Bootcamp",
+      		blurb: "Jersey City location",
+      		// link: '<p><a href="https://codingbootcamp.rutgers.edu/" target="_blank">'+
+        //     'https://codingbootcamp.rutgers.edu/</a> '+
+        //     '</p>'
+      }];
 
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
+	        var infowindow = new google.maps.InfoWindow({
+	          content: contentWindow.name
+	        });
 
-        var marker = new google.maps.Marker({
-          position: rcb,
-          map: map,
-          title: 'Rutgers Coding Bootcamp'
-        });
+	        var marker = new google.maps.Marker({
+	          position: rcb,
+	          map: map,
+	          title: 'Rutgers Coding Bootcamp'
+	        });
+
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
-      }
+
+        	  var marker = new google.maps.Marker({
+	          position: {lat: 40.8282, lng: -74.0876},
+	          map: map,
+	          title: 'Rutge'
+	        });
+
+
+
+ }
+
+
+
+
+
+
+
+
 
  // google maps API key= AIzaSyCSVZ6NLbN56qrReRGN7czA9m9y3CrMmjs
