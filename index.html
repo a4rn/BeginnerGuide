@@ -14,19 +14,22 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-<body>
-<!-- creates the navagation bar -->
-<nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo"> Home</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#">A link</a></li>
-      <li><a href="#">A link</a></li>
-     <li><a href="#">A link</a></li>
-    </ul>
-  </div>
-</nav>
 
+<!-- creates the navagation bar -->
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"> Home</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#firstSection">1st Section</a></li>
+        <li><a href="#secondSection">2nd Section</a></li>
+       <li><a href="#bootcamps">Coding Bootcamps</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<body>
 <!-- parallax effect -->
 <div class="parallax-container">
     <div class="parallax">
@@ -34,104 +37,103 @@
     </div>
 </div>
 
-  <div class="row">
-      <div class="col s12 m5">
-        <div class="card-panel teal">
-          <span class="white-text">
-            <h1>Search</h1>
-          </span>
-        </div>
+<div class="row" id= "firstSection">
+    <div class="col s12 m5">
+      <div class="card-panel teal">
+        <span class="white-text">
+          <h1>Search</h1>
+        </span>
       </div>
-  </div>
-
-  <div class="parallax-container">
-    <div class="parallax">
-      <img src="http://manaskriti.com/images/jscript.png" id= "codeImage"/>
     </div>
-  </div>
+</div>
 
-  <div class="row">
-    <h1>Youtube video</h1>   
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="http://manaskriti.com/images/jscript.png" id= "codeImage"/>
   </div>
+</div>
 
-  <div class="parallax-container">
-    <div class="parallax">
-        <img src="http://manaskriti.com/images/jscript.png" id= "codeImage" />
-    </div>
-  </div>
+<div class="row" id= "secondSection">
+  <h1>Youtube video</h1>   
+</div>
 
-  <div class="row">
-      <h2>Coding Bootcamps</h2>
+<div class="parallax-container">
+  <div class="parallax">
+      <img src="http://manaskriti.com/images/jscript.png" id= "codeImage" />
   </div>
+</div>
+
+<div class="row" id= "bootcamps" >
+  <h2>Coding Bootcamps</h2>
 
   <div id="map"></div>
 
-<div id="bootcampList">
-  <ul class="collapsible" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Rutgers Coding Bootcamp</div>
-        <div class="collapsible-body">
-              <p> 
-                  Two locations:<br><br>
-                    <strong>New Brunswick Campus</strong>: <br>
-                    <span id= "address">
-                    Rutgers, The State University of New Jersey<br></span>
-                     <span id= "address">57 US Highway 1<br></span>
-                     <span id= "address">New Brunswick, NJ 08901-8554<br></span>
-                    
-                    <strong>Jersey City Campus</strong>: <br>
-                    <span id= "address">
-                    Harborside Financial Center, 3 2nd St, <br></span>
-                     <span id= "address">Jersey City, NJ 07311 </span>
-                    <br><br>
-                    Click <a href= "https://codingbootcamp.rutgers.edu/" target="_blank">here</a> for more information!
-                
-              </p>
-        </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>App Academy</div>
-        <div class="collapsible-body">
-          <p>
-            598 Broadway<br>
-            New York, NY 10012<br><br>
-            Click <a href= "www.appacademy.io/" target="_blank">here</a> for more information!
-          </p>
-        </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>General Assembly</div>
-        <div class="collapsible-body">
-          <p>
-            10 East 21st Street, 4th Floor <br>
-            New York, NY 10010 <br><br>
-            Click <a href= "https://generalassemb.ly/new-york-city" target="_blank">here</a> for more information!
-          </p>
-        </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Dev Bootcamp</div>
-        <div class="collapsible-body">
-          <p>
-            48 Wall St <br> 
-            New York, NY 10005 <br><br>
-            Click <a href= "devbootcamp.com/location-nyc/" target="_blank">here</a> for more information!
-          </p>
-        </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Flatiron School</div>
-        <div class="collapsible-body">
-          <p>
-            11 Broadway #260 <br> 
-            New York, NY 10004 <br><br>
-            Click <a href= "flatironschool.com/" target="_blank">here</a> for more information!
-          </p>
-        </div>
-    </li>
-  </ul>
+  <div id="bootcampList">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>Rutgers Coding Bootcamp</div>
+          <div class="collapsible-body">
+                <p> 
+                    Two locations:<br><br>
+                      <strong>New Brunswick Campus</strong>: <br>
+                      <span id= "address">
+                      Rutgers, The State University of New Jersey<br></span>
+                       <span id= "address">57 US Highway 1<br></span>
+                       <span id= "address">New Brunswick, NJ 08901-8554<br></span>
+                      
+                      <strong>Jersey City Campus</strong>: <br>
+                      <span id= "address">
+                      Harborside Financial Center, 3 2nd St, <br></span>
+                       <span id= "address">Jersey City, NJ 07311 </span>
+                      <br><br>
+                      Click <a href= "https://codingbootcamp.rutgers.edu/" target="_blank">here</a> for more information!
+                  
+                </p>
+          </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>App Academy</div>
+          <div class="collapsible-body">
+            <p>
+              598 Broadway<br>
+              New York, NY 10012<br><br>
+              Click <a href= "www.appacademy.io/" target="_blank">here</a> for more information!
+            </p>
+          </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>General Assembly</div>
+          <div class="collapsible-body">
+            <p>
+              10 East 21st Street, 4th Floor <br>
+              New York, NY 10010 <br><br>
+              Click <a href= "https://generalassemb.ly/new-york-city" target="_blank">here</a> for more information!
+            </p>
+          </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>Dev Bootcamp</div>
+          <div class="collapsible-body">
+            <p>
+              48 Wall St <br> 
+              New York, NY 10005 <br><br>
+              Click <a href= "devbootcamp.com/location-nyc/" target="_blank">here</a> for more information!
+            </p>
+          </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>Flatiron School</div>
+          <div class="collapsible-body">
+            <p>
+              11 Broadway #260 <br> 
+              New York, NY 10004 <br><br>
+              Click <a href= "flatironschool.com/" target="_blank">here</a> for more information!
+            </p>
+          </div>
+      </li>
+    </ul>
+  </div>
 </div>
-
 <!-- script for Google maps API -->
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSVZ6NLbN56qrReRGN7czA9m9y3CrMmjs&callback=initMap">
@@ -143,4 +145,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSVZ6NLbN56qrReRGN7czA9m9
 <script type="text/javascript" src="script.js"></script>
 
 </body>
+
+
+
 </html>
