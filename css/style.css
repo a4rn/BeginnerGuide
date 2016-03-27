@@ -1,8 +1,7 @@
 .nav-wrapper{
-<<<<<<< HEAD
 	background-color: teal;
-
 }
+
 #row1{
 	margin-top: 40px;
 }
@@ -14,6 +13,13 @@
 	opacity: 0.6
 }
 
+#podcastDiv{
+	margin-left: 20px;
+	float: left;
+}
+h1{
+	text-align: center;
+}
 h2{
 	text-align: center;
 }
