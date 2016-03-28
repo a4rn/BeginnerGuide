@@ -2,37 +2,95 @@
  $(document).ready(function(){
  	// loads the parallax effect when the page loads
       $('.parallax').parallax(); 
-});
+   $('.autoplay').slick({
+		  'slidesToShow' : 3,
+		  'slidesToScroll' : 1,
+		  'autoplay' : true,
+		  'autoplaySpeed' : 2000 ,
+		  'infinite' : true
+		});
+
+ });
+			
+
+//gets 10 javascript related Youtube videos
+function getYTvideos() {
+    var queryURL = 'https://www.googleapis.com/youtube/v3/search?&q=javascript&videoEmbeddable=true&type=video&maxResults=10&key=AIzaSyBwQny0pptr3_O-P3kychqBguWLe8rP0hE&part=snippet&relevanceLanguage=en';
+      
+        $.ajax({
+                url: queryURL,
+                method: 'GET',
+                dataType: 'jsonp'
+                
+        }).done(function(response) {
+              console.log('YT = ' + response);
+              processYTresp(response.items);
+        }).fail(function() {
+              console.log('ajax failed');
+        });
+        
+  };
 
 
-//adds the podcasts
-function getsample() {
-
-	var queryURL = 'http://itunes.apple.com/search?term=javascript&media=podcast&entity=podcast' 
-
-	$.ajax({
-	        url: queryURL,
-	        method: 'GET',
-	        dataType: 'jsonp'
-	})
-	  .done(function(response) {
-	  	console.log(response);
-	  	var a=response;
-	  	var b=response.results;
-	  	var d='';
-	  	console.log(response.resultCount)
-	  	for (var i = 0; i < 6; i++) {
-	  	
-  			var d = d + '<div id= podcastDiv>' +'<p>'+b[i].artistName + '</p>' +
-  				'<img src=' + b[i].artworkUrl100 + '>' +
-  				'<a href=' + b[i].trackViewUrl + '>' +'</div>'+'<br>' 
-	  	}		
-	  	$('#show').html(d)
-	  });
-}
-
-getsample();	
+//shows the videos in the DOM
+ function processYTresp(resp) {
     
+    var YTembed = 'https://www.youtube.com/embed/';  
+    
+    for (var i = 0; i < resp.length; i++) {
+      var vidsrc = YTembed+resp[i].id.videoId+'?enablejsapi=1'
+      var vidlist = $('<iframe>');
+      vidlist.attr('height','500px');
+      vidlist.attr('width','500px');
+      vidlist.attr('src',vidsrc);
+      $('#YTsection').append(vidlist);
+    }
+     
+  };
+
+	function getPodcasts() {
+ 
+    	var queryURL = 'https://itunes.apple.com/search?term=javascript&media=podcast&entity=podcast' 
+    
+	    $.ajax({
+	            url: queryURL,
+	            method: 'GET',
+	            dataType: 'jsonp'
+
+	    }).done(function(response) {
+	    		console.log(response);
+	    		processPodcastresp(response);
+	    }).fail(function() {
+              console.log('ajax failed');
+ 		});
+ 	};
+
+
+ 	function processPodcastresp(r) {       
+	      	
+     	var b=r.results;
+   		      
+      	for (var i = 0; i < r.resultCount; i++) {
+      		var podlist = $('<span>');
+	  		
+	  		// debugger;
+	  		var podHref = $('<a>'); 
+	  		podHref.attr('href', b[i].trackViewUrl);
+	  		podHref.attr('target','_blank');
+
+	  		var podImg = $('<img>');
+	  		podImg.attr('src',b[i].artworkUrl100);		
+	  		podImg.attr('height','400px');
+      		podImg.attr('width','400px');
+	  		podHref.append(podImg)
+	  		podlist.append(podHref);
+	  		$('#Podsection').append(podlist)
+      	}		
+      	
+      
+	};
+
+
 
 
 //creating the Google map
@@ -49,11 +107,11 @@ getsample();
 
 // creates the actual map with the center on Rutgers Coding Bootcamp
 
-	    var map = new google.maps.Map(document.getElementById('map'), {
-	      zoom: 12,
-	      center: new google.maps.LatLng(40.717470, -74.033561),
-	      mapTypeId: google.maps.MapTypeId.ROADMAP
-	    });
+	    // var map = new google.maps.Map(document.getElementById('map'), {
+	    //   zoom: 12,
+	    //   center: new google.maps.LatLng(40.717470, -74.033561),
+	    //   mapTypeId: google.maps.MapTypeId.ROADMAP
+	    // });
 
 	    var infowindow = new google.maps.InfoWindow();
 
@@ -82,10 +140,9 @@ getsample();
  };
 
 initMap();
-
-
-
-
+// debugger;
+getYTvideos();	
+getPodcasts();
 
 
 
