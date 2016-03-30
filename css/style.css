@@ -1,3 +1,6 @@
+
+
+
 .nav-wrapper{
 	background-color: purple;
 }
@@ -19,10 +22,19 @@
 }
 #bootcampList{
 	float: left;
-	display: inline;
+	display: flex;
 	margin-left: 20px
 }
 #address{
 	margin-left: 20px;
 }
-
+footer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	background-color: #666666;
+	padding-top: 20px;
+	text-align: center;
+	color: #dddddd;

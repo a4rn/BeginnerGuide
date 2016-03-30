@@ -20,32 +20,68 @@
 
 <!-- creates the navagation bar -->
 <nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo"> Home</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#">A link</a></li>
-      <li><a href="#">A link</a></li>
-     <li><a href="#">A link</a></li>
-    </ul>
-  </div>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+  </ul>
+  <ul id="slide-out" class="side-nav">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+  </ul>
+  <ul id="slide-out" class="side-nav">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 </nav>
+<script>
+$('.button-collapse').sidenav('hide');
 
+</script>
 <!-- parallax effect -->
-<div class="parallax-container">
+<div class="parallax-container valign-wrapper">
     <div class="parallax">
         <img src="http://manaskriti.com/images/jscript.png" id= "codeImage" />
     </div>
 </div>
 
-  <div class="row">
-      <div class="col s12 m5">
-        <div class="card-panel teal">
-          <span class="white-text">
-            <h1>Search</h1>
-          </span>
-        </div>
-      </div>
-  </div>
+<div class="center-align">
+<img src="jslogo.png">
+ <div class="row">
+  <div class="col s12 m6 l12">
+  
+<input type="text" id="searchText" class="center-align"> 
+</div>
+</div>
+<nav>
+<div class="nav-wrapper">
+<form>
+<div class="input-field">
+<input id="search" type="search" required>
+<label for="search"><i class="material-icons">search</i></label>
+<i class="material-icons">close</i>
+<div class="row">
+<div class="searchButton">
+<a class="z-depth-5 waves-effect waves-light btn">
+<strong>Search Javascript</strong>
+</a>
+</div>
+</div>
+</div>
+</form>
+</div>
+</nav>
+
+<div class="searchResults"></div>
+
+</img>
+</div>
+
 
   <div class="parallax-container">
     <div class="parallax">
@@ -53,8 +89,12 @@
     </div>
   </div>
 
-  <div class="row">
-    <h1>Youtube video</h1>   
+  <div class="row center-align">
+    <h1>Youtube video</h1> 
+    <iframe width="300" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe>
+    <iframe width="300" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe>
+    <iframe width="300" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe>
+    <iframe width="300" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe> 
   </div>
 
   <div class="parallax-container">
@@ -63,7 +103,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row center-align">
       <h2>Coding Bootcamps</h2>
   </div>
 
@@ -133,17 +173,26 @@
         </div>
     </li>
   </ul>
+ 
 </div>
 
 <!-- script for Google maps API -->
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSVZ6NLbN56qrReRGN7czA9m9y3CrMmjs&callback=initMap">
 </script>
+ 
 
+
+
+<footer>© 2016 Copyright Brianne Rey Joel</footer>
+                     
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="css/js/materialize.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
+
+<script type="text/javascript" src="search.js"></script>
+
 
 </body>
 </html>
