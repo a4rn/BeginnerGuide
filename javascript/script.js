@@ -107,11 +107,11 @@ function getYTvideos() {
 
 // creates the actual map with the center on Rutgers Coding Bootcamp
 
-	    // var map = new google.maps.Map(document.getElementById('map'), {
-	    //   zoom: 12,
-	    //   center: new google.maps.LatLng(40.717470, -74.033561),
-	    //   mapTypeId: google.maps.MapTypeId.ROADMAP
-	    // });
+	    var map = new google.maps.Map(document.getElementById('map'), {
+	      zoom: 12,
+	      center: new google.maps.LatLng(40.717470, -74.033561),
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    });
 
 	    var infowindow = new google.maps.InfoWindow();
 
