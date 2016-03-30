@@ -3,23 +3,26 @@
 <html>
 
     <head>
-    <title>Javascript</title>
+    <title>Script Javascript</title>
       <meta charset="utf-8">
       <meta name="viewport" content="initial-scale=1.0">
       <!--Import Google Icon Font-->
+      
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
-
+      <!--Import Ken Wheeler slick-->
+      <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
       <link type="text/css" rel="stylesheet" href="css/style.css" />
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-<body>
 
 <!-- creates the navagation bar -->
-<nav>
+
+<!-- <nav>
   <ul class="right hide-on-med-and-down">
     <li><a href="#!">First Sidebar Link</a></li>
     <li><a href="#!">Second Sidebar Link</a></li>
@@ -43,12 +46,29 @@
 $('.button-collapse').sidenav('hide');
 
 </script>
+ -->
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"> Home</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#firstSection">1st Section</a></li>
+        <li><a href="#secondSection">2nd Section</a></li>
+       <li><a href="#bootcamps">Coding Bootcamps</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<body>
+
 <!-- parallax effect -->
 <div class="parallax-container valign-wrapper">
     <div class="parallax">
         <img src="http://manaskriti.com/images/jscript.png" id= "codeImage" />
     </div>
 </div>
+
 
 <div class="center-align">
 <img src="jslogo.png">
@@ -83,11 +103,6 @@ $('.button-collapse').sidenav('hide');
 </div>
 
 
-  <div class="parallax-container">
-    <div class="parallax">
-      <img src="http://manaskriti.com/images/jscript.png" id= "codeImage"/>
-    </div>
-  </div>
 
   <div class="row center-align">
     <h1>Youtube video</h1> 
@@ -95,19 +110,38 @@ $('.button-collapse').sidenav('hide');
     <iframe width="300" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe>
     <iframe width="300" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe>
     <iframe width="300" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe> 
-  </div>
 
-  <div class="parallax-container">
-    <div class="parallax">
-        <img src="http://manaskriti.com/images/jscript.png" id= "codeImage" />
-    </div>
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="http://manaskriti.com/images/jscript.png" id= "codeImage"/>
+
   </div>
+</div>
+
+<div class="row" id="YTsection"></div>
+
+<div class="parallax-container">
+  <div class="parallax">
+      <img src="http://manaskriti.com/images/jscript.png" id= "codeImage" />
+  </div>
+</div>
+
+<div class="autoplay" id="Podsection">
+  
+</div>
+
 
   <div class="row center-align">
       <h2>Coding Bootcamps</h2>
   </div>
+</div>
+
+<div class="row" id="bootcamps" >
+  <h2>Coding Bootcamps</h2>
+  <p>If you're having trouble learning on your own, maybe it's time to try a coding bootcamp. Coding bootcamps are a great way to learn to code. It you feel you need a more structured path in order to learn, try one of the coding bootcamps listed below!</p>
 
   <div id="map"></div>
+
 
 <div id="bootcampList">
   <ul class="collapsible" data-collapsible="accordion">
@@ -176,9 +210,10 @@ $('.button-collapse').sidenav('hide');
  
 </div>
 
+
 <!-- script for Google maps API -->
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSVZ6NLbN56qrReRGN7czA9m9y3CrMmjs&callback=initMap">
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSVZ6NLbN56qrReRGN7czA9m9y3CrMmjs">
 </script>
  
 
@@ -189,11 +224,14 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSVZ6NLbN56qrReRGN7czA9m9
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="css/js/materialize.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="javascript/script.js"></script>
+<script type="text/javascript" src="javascript/slick.min.js"></script>
 
 <script type="text/javascript" src="search.js"></script>
 
 
 </body>
+
+
 </html>
 

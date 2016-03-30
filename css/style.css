@@ -2,8 +2,9 @@
 
 
 .nav-wrapper{
-	background-color: purple;
+	background-color: teal;
 }
+
 #row1{
 	margin-top: 40px;
 }
@@ -14,20 +15,43 @@
 #codeImage{
 	opacity: 0.6
 }
+
+#podcastDiv{
+	margin-left: 20px;
+	float: left;
+}
+h1{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+
 #map {
     height: 500px;
     width: 600px;
     float: left;
     display: inline;
+
+    margin-left: 30px;
+    border: black solid 2px;
+
 }
 #bootcampList{
 	float: left;
-	display: flex;
+	display: inline;
+	margin-left: 20px;
+	
+}
+#bootcamps{
+	margin-bottom: 50px;
 	margin-left: 20px
+
 }
 #address{
 	margin-left: 20px;
 }
+
 footer {
 	position: fixed;
 	left: 0;
@@ -38,3 +62,4 @@ footer {
 	padding-top: 20px;
 	text-align: center;
 	color: #dddddd;
+
