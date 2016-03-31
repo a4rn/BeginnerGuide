@@ -29,7 +29,9 @@ img{
 .podcastImage{
 	margin-left: 10px;
 }
-
+p{
+	text-align: center;
+}
 h1{
 	text-align: center;
 }
