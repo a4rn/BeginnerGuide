@@ -1,10 +1,13 @@
-
-
-
 .nav-wrapper{
 	background-color: teal;
 }
-
+p{
+	text-align: center;
+}
+img{
+	margin-top: 30px;
+	text-align: center;
+}
 #row1{
 	margin-top: 40px;
 }
@@ -15,10 +18,19 @@
 #codeImage{
 	opacity: 0.6
 }
-
-#podcastDiv{
-	margin-left: 20px;
-	float: left;
+#Podsection{
+	text-align: center;
+	padding: left: 20px;
+}
+#YTsection{
+	text-align: center;
+	padding: left: 20px;
+}
+.podcastImage{
+	margin-left: 10px;
+}
+p{
+	text-align: center;
 }
 h1{
 	text-align: center;
@@ -26,16 +38,20 @@ h1{
 h2{
 	text-align: center;
 }
-
+#logo{
+	text-align: center;
+}
 #map {
     height: 500px;
     width: 600px;
     float: left;
     display: inline;
-
-    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-left: 70px;
     border: black solid 2px;
-
+}
+.searchButton{
+	text-align: center;
 }
 #bootcampList{
 	float: left;
@@ -58,8 +74,8 @@ footer {
 	right: 0;
 	bottom: 0;
 	height: 50px;
-	background-color: #666666;
+	background-color: teal;
 	padding-top: 20px;
 	text-align: center;
 	color: #dddddd;
-
+}
