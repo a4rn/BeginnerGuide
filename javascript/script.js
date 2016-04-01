@@ -67,7 +67,7 @@ function getYTvideos() {
 	      	
      	var b=r.results;
    		     
-      	for (var i = 0; i < 10; i++) {
+      	for (var i = 0; i < 4; i++) {
       		var podlist = $('<span>');
 	  		
 	  		// debugger;
@@ -77,8 +77,8 @@ function getYTvideos() {
 
 	  		var podImg = $('<img>');
 	  		podImg.attr('src',b[i].artworkUrl100);		
-	  		podImg.attr('height','200px');
-      		podImg.attr('width','200px');
+	  		podImg.attr('height','300px');
+      		podImg.attr('width','300px');
       		podImg.addClass('podcastImage')
 	  		podHref.append(podImg)
 	  		podlist.append(podHref);
