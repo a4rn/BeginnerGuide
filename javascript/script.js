@@ -1,6 +1,8 @@
 $(document).ready(function() {
     // loads the parallax effect when the page loads
     $('.parallax').parallax();
+    getYTvideos();
+    getPodcasts();
 
 });
 
@@ -14,7 +16,7 @@ function getYTvideos() {
         dataType: 'jsonp'
 
     }).done(function(response) {
-        console.log('YT = ' + response);
+        console.log(response);
         processYTresp(response.items);
     }).fail(function() {
         console.log('ajax failed');
@@ -63,7 +65,6 @@ function processPodcastresp(r) {
     for (var i = 0; i < 4; i++) {
         var podlist = $('<span>');
 
-        // debugger;
         var podHref = $('<a>');
         podHref.attr('href', b[i].trackViewUrl);
         podHref.attr('target', '_blank');
@@ -119,6 +120,3 @@ function initMap() {
 };
 
 initMap();
-// debugger;
-getYTvideos();
-getPodcasts();
