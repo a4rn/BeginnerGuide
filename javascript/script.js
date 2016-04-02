@@ -6,6 +6,7 @@ $(document).ready(function() {
 
 });
 
+
 //gets 10 javascript related Youtube videos
 function getYTvideos() {
     var queryURL = 'https://www.googleapis.com/youtube/v3/search?&q=javascript&videoEmbeddable=true&type=video&maxResults=10&key=AIzaSyBwQny0pptr3_O-P3kychqBguWLe8rP0hE&part=snippet&relevanceLanguage=en';
@@ -35,6 +36,7 @@ function processYTresp(resp) {
         vidlist.attr('height', '300px');
         vidlist.attr('width', '300px');
         vidlist.attr('src', vidsrc);
+        vidlist.attr('allowfullscreen', 'allowfullscreen');
         $('#YTsection').append(vidlist);
     }
 
@@ -119,4 +121,5 @@ function initMap() {
 
 };
 
+var map;
 initMap();
