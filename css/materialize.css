@@ -2758,6 +2758,11 @@ video.responsive-video {
     overflow: hidden;
     white-space: nowrap;
   }
+
+  iframe {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .breadcrumb {
